@@ -1,0 +1,47 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  margin: 10px;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+label{
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+input[type="email"],input[type="password"]{
+font-size: 1rem;
+padding: 0.5rem 0.5rem;
+}
+button[type="submit"]{
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.error{
+  color: red;
+  margin: 1rem 0 0.5rem 0;
+}
+
+center>h1{
+  margin: 2rem;
+}
+
+.links>a{
+  margin-left: 1rem;
+}

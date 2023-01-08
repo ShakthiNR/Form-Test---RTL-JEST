@@ -45,3 +45,27 @@ center>h1{
 .links>a{
   margin-left: 1rem;
 }
+.loading{
+  text-align: center;
+  color: #000;
+  background-color: lightgray;
+  height: 80vh;
+}
+.tasks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 1.75rem;
+  background: lightgray;
+}
+.task{
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px 10px;
+  padding: 10px;
+  width: fit-content;
+  margin: 10px;
+}
+.task>li{
+  list-style: none;
+}

@@ -16,17 +16,18 @@ Unit Testing Each Component:
 
 ```
 ## How to write Test File
+```
 1. filename.test.jsx (or)
 2. filename.setup.jsx
-   Note: Keep 1/2 in __test__ folder
-
+- Note: Keep 1/2 in __test__ folder
+```
 ## What is Test Block ?
-
+```
 1. test(name,callback) (or) it(name,callback)
 2. We can group test/it using describe(name,callback) block
 3. Nested describe is allowed
-Note: Avoid Writing Nested Test block
- 
+- Note: Avoid Writing Nested Test block
+``` 
 
 ## How to Render Component
    - render(<Component>) --> It Creates Virtual Dom
@@ -76,6 +77,7 @@ Ref : [click_here](https://github.com/testing-library/jest-dom)
 ## Event Handling
 ```
 - Use userEvent from RTL
+- Update with Version 14
 - test block's callback should be async
 - Add "const user = userEvent.setup()" in first line of test
 ```
@@ -92,7 +94,7 @@ Ref : [click_here](https://github.com/testing-library/jest-dom)
 3. listen,reset,close the server after all the request
 ```
 
-## How to run test
+## How to Run Test
 
 ```JavaScript
 1. npm start

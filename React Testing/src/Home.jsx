@@ -11,6 +11,7 @@ const Home = () => {
         <Link to="/sign-in"> Sign In </Link>
         <Link to="/sign-up"> Sign Up </Link>
         <Link to="/get-tasks"> Fetch API(Tasks) </Link>
+        <Link to="/get-users">CRUD Users Lists</Link>
       </center>
     </React.Fragment>
   );

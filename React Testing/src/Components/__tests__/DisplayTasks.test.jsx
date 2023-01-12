@@ -32,8 +32,12 @@ afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
 
-//Check the render using MSW lib
-test("Render List Of Tasks - API Get Call", async () => {
+
+//Get Request
+describe("Test- API Get Call",()=>{
+  //Check the render using MSW lib
+
+test("Render List Of Tasks", async () => {
   renderDisplayTasksComp();
   const loadingElm = await screen.findByText(/loading \.\.\.\./i) //check for loading
   expect(loadingElm).toBeInTheDocument();
@@ -57,3 +61,13 @@ test('Handles server error', async () => {
   const errorElement = await screen.findByText(/something is wrong in server, get back later/i)
   expect(errorElement).toBeInTheDocument()
 })
+
+})
+
+
+
+
+
+
+
+

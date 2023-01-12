@@ -4,6 +4,7 @@ import SignIn from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
 import DisplayTasks from "./Components/DisplayTasks"
 import Home from "./Home";
+import DisplayUsers from "./Components/DisplayUsers";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/" element={<Home />} />
         <Route path="/get-tasks" element={<DisplayTasks/>} />
+        <Route path="/get-users" element={<DisplayUsers />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </React.Fragment>

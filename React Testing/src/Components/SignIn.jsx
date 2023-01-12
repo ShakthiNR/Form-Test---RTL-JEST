@@ -40,13 +40,13 @@ const SignIn = () => {
          { errors && <center className='error'>{errors}</center>  }
       <div className='form'>
         <form onSubmit={handleSubmit}>          
-          <div className='form--control'>
+          <div>
             <label htmlFor='email' > Enter Your Email Address</label><br/>
             <input type="email" id='email' aria-label='email' name='email' 
             onChange={handleChange} value={values.email} 
             placeholder='Enter User-Name'  />
           </div> <br/>
-          <div className='form--control'>
+          <div>
             <label htmlFor='password' > Enter Your Password</label><br/>
             <input type="password" id='password' aria-label="password" name='password' 
             onChange={handleChange} value={values.password}

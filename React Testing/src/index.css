@@ -23,7 +23,7 @@ label{
   margin-top: 0.5rem;
 }
 
-input[type="email"],input[type="password"]{
+input[type="email"],input[type="password"],input[type="tel"],input[type="text"]{
 font-size: 1rem;
 padding: 0.5rem 0.5rem;
 }
@@ -46,10 +46,11 @@ center>h1{
   margin-left: 1rem;
 }
 .loading{
-  text-align: center;
   color: #000;
-  background-color: lightgray;
-  height: 80vh;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .tasks{
   display: flex;
@@ -69,3 +70,62 @@ center>h1{
 .task>li{
   list-style: none;
 }
+
+.layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.users--layout{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+.user{
+  flex: 1 2 100px;
+  border:1px solid lightgray;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.user:hover{
+  transform: scale(1.15);
+  font-size: 1rem !important;
+  width: fit-content;
+  height: fit-content;
+}
+
+.icons{
+  display: flex;
+  justify-content: end;
+  font-weight: bolder;
+}
+.update--icon{
+  color: black;
+  cursor: pointer;
+  border:1px solid lightskyblue;
+  margin-top: 15px;
+  
+}
+.update--icon:hover, .delete--icon:hover{
+  transform: translate(0, -5px);
+  transition: 0.5s ;
+}
+
+.success{
+  color: green;
+  margin: 1rem 0 0.5rem 0;
+}
+.delete--icon{
+  color: crimson;
+  cursor: pointer;
+  border: none;
+  background: white;
+  font-weight: bold;
+}
+

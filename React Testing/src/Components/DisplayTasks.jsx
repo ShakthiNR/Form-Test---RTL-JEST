@@ -38,7 +38,7 @@ const DisplayTasks = () => {
         <p className="loading"> Loading ....</p>
       ) : (
         <ul className="tasks">
-          {results.map((result) => {
+          {results?.map((result) => {
             const { userId, id, title, completed } = result;
             return (
               <div key={id} className="task">

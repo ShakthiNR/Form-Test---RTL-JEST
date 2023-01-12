@@ -1,7 +1,7 @@
 # 🔧 Testing React Application 🔧
-   <p align="center">
-   Below Article Prepared By **Shakthi N R**
-   </p>
+   ```
+   Below Article Prepared By __Shakthi N R__
+  ```
    
 
 ## Library : (Inbuilt with npx create-react-app myapp)

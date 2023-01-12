@@ -1,7 +1,8 @@
 # 🔧 Testing React Application 🔧
-   ```html
-   <center> Below Article Prepared By <bold> Shakthi N R </bold> </center>
-   ```
+   <p align="center">
+   Below Article Prepared By **Shakthi N R**
+   </p>
+   
 
 ## Library : (Inbuilt with npx create-react-app myapp)
 1. RTL - React Testing Library

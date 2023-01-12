@@ -68,6 +68,24 @@ test('Handles User Servers Error', async () => {
     const errorElement = await screen.findByText("Something is Wrong in Server, Get Back Later")
     expect(errorElement).toBeInTheDocument()
 })
+ //List of items after delete
+ const usersAfterDelete =[
+  {
+    "username": "Kamal",
+    "email": "kamal@g.ni",
+    "id": 1673533980337
+},
+{
+    "username": "Rajini",
+    "email": "rajini@gmail.com",
+    "id": 1673533980338
+},
+{
+    "username": "Ajith",
+    "email": "ajith@gm.com",
+    "id": 1673533980339
+}
+]
 
 test("Handle Delete Request",async()=>{
 
@@ -85,25 +103,7 @@ test("Handle Delete Request",async()=>{
   const listUsers =  screen.getAllByRole("listitem")
   expect(listUsers).toHaveLength(3);
 
-  //List of items after delete
-  const usersAfterDelete =[
-    {
-      "username": "Kamal",
-      "email": "kamal@g.ni",
-      "id": 1673533980337
-  },
-  {
-      "username": "Rajini",
-      "email": "rajini@gmail.com",
-      "id": 1673533980338
-  },
-  {
-      "username": "Ajith",
-      "email": "ajith@gm.com",
-      "id": 1673533980339
-  }
-  ]
-
+ 
   //Checking the list of items are present on screen
   listUsers.forEach((user,index)=>{
     const { getByText } = within(user)
@@ -115,6 +115,8 @@ test("Handle Delete Request",async()=>{
   
 })
 
+
+//Handling Post Request
 test("Handle POST Request",async()=>{
   const user = userEvent.setup();
   renderDisplayUsersComp()
@@ -129,19 +131,32 @@ test("Handle POST Request",async()=>{
   await user.type(usernameInput,"shakthi")
   await user.type(emailInput,"s@gmail.com")
   await user.click(createUserBtn)
+
+  //Data after insertion
+  usersAfterDelete.push({
+      "username": "shakthi",
+      "email": "s@gmail.com",
+      "id": 4
+  })
   const createResult = await screen.findByText("User Created Successfully!!")
+
+  const listUsers =  screen.getAllByRole("listitem")
+  expect(listUsers).toHaveLength(4);
+
+  listUsers.forEach((user,index)=>{
+    const { getByText } = within(user)
+      const {username,email}=  usersAfterDelete[index]
+      expect(getByText(username)).toBeInTheDocument()
+      expect(getByText(email)).toBeInTheDocument()
+  })
+  
 
   expect(createResult).toBeInTheDocument()
   await user.clear(emailInput)
   await user.type(emailInput,"s@gmail.com")
   await user.click(createUserBtn)
 
-  const emailError = await screen.findByText("User Created Successfully!!")
+  const emailError = await screen.findByText("User Mail Already exists")
   expect(emailError).toBeInTheDocument()
-
-
-
-
-
 
 })

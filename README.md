@@ -19,10 +19,10 @@ Unit Testing Each Component:
 
 ```
 ## How to write Test File
-- .test (or) .setup
+- .test (or) .specs
 ```
 1. filename.test.jsx (or)
-2. filename.setup.jsx
+2. filename.specs.jsx
 - Note: Keep 1/2 in __test__ folder
 ```
 ## What is Test Block ?
